@@ -1,3 +1,43 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const games = [
+        ["Slope", "https://slopegame.io"],
+        ["Run 3", "https://run3.io"],
+        ["Retro Bowl", "https://retrobowl.me"],
+        ["New Polytrack", "https://newpolytrack.com"],
+        ["Gladihoppers", "https://gladihoppers.com"]
+        // ... add your other games here
+    ];
+
+    const container = document.getElementById("games");
+
+    // Generate game cards
+    games.forEach(game => {
+        const card = document.createElement("div");
+        card.className = "game-card";
+        card.innerHTML = `
+            <h2>${game[0]}</h2>
+            <a href="${game[1]}" target="_blank">Play</a>
+        `;
+        container.appendChild(card);
+    });
+
+    // Search functionality
+    const searchBar = document.getElementById("searchBar");
+
+    searchBar.addEventListener("input", () => {
+        const query = searchBar.value.toLowerCase();
+        const cards = document.querySelectorAll(".game-card");
+
+        cards.forEach(card => {
+            const title = card.querySelector("h2").textContent.toLowerCase();
+            if (title.includes(query)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
 const games = [
   ["Slope", "https://slopegame.io"],
   ["Run 3", "https://run3.io"],
@@ -102,6 +142,7 @@ searchBar.addEventListener("input", () => {
     }
   });
 });
+
 
 
 
