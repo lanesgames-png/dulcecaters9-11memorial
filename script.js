@@ -114,7 +114,8 @@ const games = [
   ["Slope 2", "https://slope2.io"]
  ["New Polytrack", "https://newpolytrack.com"],     // NEW GAME
   ["Gladihoppers", "https://gladihoppers.com"]    // NEW GAME
-  ];
+ ["Polytrack.gg", "https://polytrack.gg"]
+ ];
 
 const container = document.getElementById("games");
 
@@ -142,6 +143,7 @@ searchBar.addEventListener("input", () => {
     }
   });
 });
+
 
 
 
