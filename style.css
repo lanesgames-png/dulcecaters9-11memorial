@@ -216,6 +216,19 @@ footer {
   box-shadow: 0 0 30px #a855f7, 0 0 30px #38bdf8;
   transform: scale(1.05);
 }
+/* Optional glowing cursor circle */
+.cursor-glow {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #38bdf8;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease;
+  z-index: 9999;
+}
+
 
 
 
