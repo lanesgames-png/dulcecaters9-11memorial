@@ -145,6 +145,18 @@ document.addEventListener("mousemove", e => {
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
 });
+function checkPassword() {
+  const input = document.getElementById("passwordInput").value;
+  const error = document.getElementById("errorMsg");
+
+  if (input === "MUSLIM") {
+    document.getElementById("login-screen").style.display = "none";
+    document.getElementById("site-content").style.display = "block";
+  } else {
+    error.textContent = "Incorrect password";
+  }
+}
+
 
 
 
