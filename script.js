@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ["Slope", "https://slopegame.io"],
         ["Run 3", "https://run3.io"],
         ["Retro Bowl", "https://retrobowl.me"],
-        ["New Polytrack", "https://newpolytrack.com"],
-        ["Gladihoppers", "https://gladihoppers.com"]
-        // ... add your other games here
+         // ... add your other games here
     ];
 
     const container = document.getElementById("games");
@@ -112,8 +110,6 @@ const games = [
   ["Stick Merge", "https://stickmerge.io"],
   ["Temple Raider", "https://temple-raider.com"],
   ["Slope 2", "https://slope2.io"]
- ["New Polytrack", "https://newpolytrack.com"],     // NEW GAME
-  ["Gladihoppers", "https://gladihoppers.com"]    // NEW GAME
  ["Polytrack.gg", "https://polytrack.gg"]
 ];
 
@@ -143,6 +139,7 @@ searchBar.addEventListener("input", () => {
     }
   });
 });
+
 
 
 
