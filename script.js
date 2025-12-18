@@ -115,7 +115,41 @@ const games = [
  ["New Polytrack", "https://newpolytrack.com"],     // NEW GAME
   ["Gladihoppers", "https://gladihoppers.com"]    // NEW GAME
  ["Polytrack.gg", "https://polytrack.gg"]
- ];
+ document.addEventListener("DOMContentLoaded", () => {
+    const games = [
+        ["Slope", "games/slope/index.html"],
+        ["Run 3", "games/run3/index.html"],
+        ["New Polytrack", "games/new-polytrack/index.html"],
+        ["Gladihoppers", "games/gladihoppers/index.html"],
+        ["Polytrack.gg", "games/polytrack-gg/index.html"]
+        // Add more games here as you download them
+    ];
+
+    const container = document.getElementById("games");
+
+    // Generate game cards with iframe preview
+    games.forEach(game => {
+        const card = document.createElement("div");
+        card.className = "game-card";
+        card.innerHTML = `
+            <h2>${game[0]}</h2>
+            <iframe src="${game[1]}" width="100%" height="400px" frameborder="0"></iframe>
+        `;
+        container.appendChild(card);
+    });
+
+    // Game search functionality
+    const searchBar = document.getElementById("searchBar");
+    searchBar.addEventListener("input", () => {
+        const query = searchBar.value.toLowerCase();
+        const cards = document.querySelectorAll(".game-card");
+        cards.forEach(card => {
+            const title = card.querySelector("h2").textContent.toLowerCase();
+            card.style.display = title.includes(query) ? "block" : "none";
+        });
+    });
+});
+];
 
 const container = document.getElementById("games");
 
@@ -143,6 +177,7 @@ searchBar.addEventListener("input", () => {
     }
   });
 });
+
 
 
 
