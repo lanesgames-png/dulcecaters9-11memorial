@@ -153,5 +153,29 @@ footer {
   text-shadow: 0 0 15px rgba(56,189,248,0.8);
   font-size: 1rem;
 }
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#searchBar {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 2px solid #38bdf8;
+  outline: none;
+  background: #020617;
+  color: white;
+  box-shadow: 0 0 15px rgba(56,189,248,0.5);
+  transition: 0.3s;
+}
+
+#searchBar:focus {
+  box-shadow: 0 0 25px #a855f7, 0 0 15px #38bdf8;
+  border-color: #a855f7;
+}
+
 
 
