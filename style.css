@@ -94,7 +94,12 @@ header::after {
   transition: opacity 0.3s;
 }
 
-.game-card:hover::before {
+.game-card:hover::before {/* Special highlight for new games */
+.game-card:nth-last-child(-n+2) a {
+  background: linear-gradient(90deg, #facc15, #f87171);
+  box-shadow: 0 0 30px #facc15, 0 0 30px #f87171;
+}
+
   opacity: 1;
   animation: slide 2s linear infinite;
 }
@@ -148,4 +153,5 @@ footer {
   text-shadow: 0 0 15px rgba(56,189,248,0.8);
   font-size: 1rem;
 }
+
 
