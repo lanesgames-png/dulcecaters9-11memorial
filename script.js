@@ -1,0 +1,2 @@
+// You can add search, favorites, or settings here later
+console.log("Unblocked Games Loaded");
