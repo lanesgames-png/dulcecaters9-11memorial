@@ -145,25 +145,8 @@ document.addEventListener("mousemove", e => {
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
 });
-// Wait until DOM loads
-document.addEventListener("DOMContentLoaded", () => {
-    // Streaming sites
-    const streaming = [
-        ["Cineby", "https://cineby.site/"]
-    ];
 
-    const streamingContainer = document.getElementById("streaming");
 
-    streaming.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "stream-card";
-        card.innerHTML = `
-            <h3>${item[0]}</h3>
-            <a href="${item[1]}" target="_blank">Watch</a>
-        `;
-        streamingContainer.appendChild(card);
-    });
-});
 
 
 
