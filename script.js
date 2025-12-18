@@ -145,23 +145,25 @@ document.addEventListener("mousemove", e => {
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
 });
-const streaming = [
-    ["Cineby", "https://cineby.site/"]
-    // You can add more streaming sites here
-];
+document.addEventListener("DOMContentLoaded", () => {
+    const streaming = [
+        ["Cineby", "https://cineby.site/"]
+    ];
 
-// Render Streaming Cards
-const streamingContainer = document.getElementById("streaming");
+    const streamingContainer = document.getElementById("streaming");
 
-streaming.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "stream-card";
-    card.innerHTML = `
-        <h3>${item[0]}</h3>
-        <a href="${item[1]}" target="_blank">Watch</a>
-    `;
-    streamingContainer.appendChild(card);
+    streaming.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "stream-card";
+        card.innerHTML = `
+            <h3>${item[0]}</h3>
+            <a href="${item[1]}" target="_blank">Watch</a>
+        `;
+        streamingContainer.appendChild(card);
+    });
 });
+
+
 
 
 
