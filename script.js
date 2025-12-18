@@ -115,9 +115,6 @@ const games = [
  ["New Polytrack", "https://newpolytrack.com"],     // NEW GAME
   ["Gladihoppers", "https://gladihoppers.com"]    // NEW GAME
  ["Polytrack.gg", "https://polytrack.gg"]
- document.addEventListener("DOMContentLoaded", () => {
-    const games = [
-    
 ];
 
 const container = document.getElementById("games");
@@ -146,6 +143,7 @@ searchBar.addEventListener("input", () => {
     }
   });
 });
+
 
 
 
