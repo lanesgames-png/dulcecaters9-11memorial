@@ -228,61 +228,8 @@ footer {
   transition: transform 0.05s ease;
   z-index: 9999;
 }
-body {
-  background: #020617;
-  font-family: Arial, sans-serif;
-  color: white;
-}
 
-.streaming {
-  margin: 40px 0;
-  text-align: center;
-}
 
-.streaming h2 {
-  color: #facc15;
-  text-shadow: 0 0 10px #facc15, 0 0 20px #f87171;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.streaming-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.stream-card {
-  background: #020617;
-  border: 2px solid #38bdf8;
-  border-radius: 15px;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(56,189,248,0.5);
-  transition: 0.3s;
-}
-
-.stream-card h3 {
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-
-.stream-card a {
-  display: inline-block;
-  padding: 8px 15px;
-  background: linear-gradient(90deg, #38bdf8, #a855f7);
-  color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.stream-card a:hover {
-  box-shadow: 0 0 30px #a855f7, 0 0 30px #38bdf8;
-  transform: scale(1.05);
-}
 
 
 
