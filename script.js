@@ -72,7 +72,9 @@ const games = [
   ["Stick Merge", "https://stickmerge.io"],
   ["Temple Raider", "https://temple-raider.com"],
   ["Slope 2", "https://slope2.io"]
-];
+ ["New Polytrack", "https://newpolytrack.com"],     // NEW GAME
+  ["Gladihoppers", "https://gladihoppers.com"]    // NEW GAME
+  ];
 
 const container = document.getElementById("games");
 
@@ -85,4 +87,5 @@ games.forEach(game => {
   `;
   container.appendChild(card);
 });
+
 
