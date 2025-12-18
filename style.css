@@ -228,7 +228,12 @@ footer {
   transition: transform 0.05s ease;
   z-index: 9999;
 }
-/* Movies & TV Section */
+body {
+  background: #020617;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
 .streaming {
   margin: 40px 0;
   text-align: center;
@@ -261,19 +266,16 @@ footer {
 
 .stream-card h3 {
   color: #38bdf8;
-  font-size: 1.2rem;
   margin-bottom: 10px;
-  text-shadow: 0 0 10px #38bdf8;
 }
 
 .stream-card a {
   display: inline-block;
-  text-decoration: none;
   padding: 8px 15px;
   background: linear-gradient(90deg, #38bdf8, #a855f7);
   color: white;
   border-radius: 20px;
-  box-shadow: 0 0 15px #38bdf8;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -281,6 +283,7 @@ footer {
   box-shadow: 0 0 30px #a855f7, 0 0 30px #38bdf8;
   transform: scale(1.05);
 }
+
 
 
 
