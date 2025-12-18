@@ -145,7 +145,9 @@ document.addEventListener("mousemove", e => {
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
 });
+// Wait until DOM loads
 document.addEventListener("DOMContentLoaded", () => {
+    // Streaming sites
     const streaming = [
         ["Cineby", "https://cineby.site/"]
     ];
@@ -162,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
         streamingContainer.appendChild(card);
     });
 });
+
 
 
 
