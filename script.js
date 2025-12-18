@@ -87,5 +87,21 @@ games.forEach(game => {
   `;
   container.appendChild(card);
 });
+const searchBar = document.getElementById("searchBar");
+
+searchBar.addEventListener("input", () => {
+  const query = searchBar.value.toLowerCase();
+  const cards = document.querySelectorAll(".game-card");
+
+  cards.forEach(card => {
+    const title = card.querySelector("h2").textContent.toLowerCase();
+    if (title.includes(query)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+
 
 
