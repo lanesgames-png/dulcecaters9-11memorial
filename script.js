@@ -96,6 +96,29 @@ searchBar.addEventListener("input", () => {
 });
 
 loadGames(gameList);
+// Fullscreen Support
+const frameWrapper = document.getElementById("frameWrapper");
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+fullscreenBtn.addEventListener("click", () => {
+    if (!document.fullscreenElement) {
+        if (frameWrapper.requestFullscreen) frameWrapper.requestFullscreen();
+        else if (frameWrapper.webkitRequestFullscreen) frameWrapper.webkitRequestFullscreen();
+        else if (frameWrapper.msRequestFullscreen) frameWrapper.msRequestFullscreen();
+        fullscreenBtn.textContent = "Exit Fullscreen";
+    } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+        fullscreenBtn.textContent = "Fullscreen";
+    }
+});
+
+// Update button text when fullscreen exits in other ways
+document.addEventListener("fullscreenchange", () => {
+    if (!document.fullscreenElement) {
+        fullscreenBtn.textContent = "Fullscreen";
+    }
+});
+
 
 
 
