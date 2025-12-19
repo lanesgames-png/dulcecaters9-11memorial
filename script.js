@@ -59,7 +59,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-document.getElementById("gameframe").src = game.url;
+const gameList = [
+  { name: "1v1.lol", url: "https://1v1.lol" },
+  { name: "Retro Bowl", url: "https://footballretro.netlify.app" },
+  { name: "Cookie Clicker", url: "https://orteil.dashnet.org/cookieclicker/" },
+  { name: "Minecraft Classic", url: "https://classic.minecraft.net" },
+  { name: "Slope", url: "https://slope-game.github.io/slope/" },
+  { name: "Fruit Ninja", url: "https://scratch.mit.edu/projects/10128407/embed" },
+];
+
+const gamesContainer = document.getElementById("games");
+const searchBar = document.getElementById("searchBar");
+const gameFrame = document.getElementById("gameframe");
+
+function loadGames(list) {
+  gamesContainer.innerHTML = "";
+  list.forEach(game => {
+    const div = document.createElement("div");
+    div.className = "game-card";
+    div.innerHTML = `
+      <h2>${game.name}</h2>
+      <a href="#">Play</a>
+    `;
+    div.querySelector("a").addEventListener("click", () => {
+      gameFrame.src = game.url;
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+    gamesContainer.appendChild(div);
+  });
+}
+
+searchBar.addEventListener("input", () => {
+  const value = searchBar.value.toLowerCase();
+  const filtered = gameList.filter(g => g.name.toLowerCase().includes(value));
+  loadGames(filtered);
+});
+
+loadGames(gameList);
+
 
 
 
