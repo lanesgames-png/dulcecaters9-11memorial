@@ -98,9 +98,11 @@ document.addEventListener("fullscreenchange", () => {
     fullscreenBtn.textContent = "Fullscreen";
   }
 });
+gameFrame.requestFullscreen()
 
 
   
+
 
 
 
