@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const games = [
+
+  // ONE SINGLE GIANT GAME LIST — ALL GAMES NOW WORK IN IFRAME
+  const gameList = [
     { name: "Slope", url: "https://slopegame.io" },
     { name: "Run 3", url: "https://run3.io" },
     { name: "Retro Bowl", url: "https://retrobowl.me" },
@@ -34,83 +36,68 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Territorial.io", url: "https://territorial.io/" },
     { name: "Elastic Man", url: "https://elasticman.fun/" },
     { name: "Cat Ninja", url: "https://catninja.io/" },
-    { name: "Popcat", url: "https://popcat.click/" }
+    { name: "Popcat", url: "https://popcat.click/" },
+    // Other small-list games merged here too:
+    { name: "Cookie Clicker", url: "https://orteil.dashnet.org/cookieclicker/" },
+    { name: "Fruit Ninja", url: "https://scratch.mit.edu/projects/10128407/embed" }
   ];
 
-  const container = document.getElementById("games");
-
-  games.forEach((game) => {
-    const card = document.createElement("div");
-    card.className = "game-card";
-    card.innerHTML = `
-      <h2>${game.name}</h2>
-      <a href="${game.url}" target="_blank">Play</a>
-    `;
-    container.appendChild(card);
-  });
-
+  const gamesContainer = document.getElementById("games");
   const searchBar = document.getElementById("searchBar");
+  const gameFrame = document.getElementById("gameframe");
+  const frameWrapper = document.getElementById("frameWrapper");
+  const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+  // Display all games as iframe-ready launcher cards
+  function loadGames(list) {
+    gamesContainer.innerHTML = "";
+    list.forEach(game => {
+      const div = document.createElement("div");
+      div.className = "game-card";
+      div.innerHTML = `
+        <h2>${game.name}</h2>
+        <a href="#">Play</a>
+      `;
+      div.querySelector("a").addEventListener("click", () => {
+        frameWrapper.style.display = "block";
+        fullscreenBtn.style.display = "inline-block";
+        gameFrame.src = game.url;
+        window.scrollTo(0, document.body.scrollHeight);
+      });
+      gamesContainer.appendChild(div);
+    });
+  }
+
+  // Search bar filters the single list
   searchBar.addEventListener("input", () => {
-    const query = searchBar.value.toLowerCase();
-    const cards = document.querySelectorAll(".game-card");
-    cards.forEach((card) => {
-      const title = card.querySelector("h2").textContent.toLowerCase();
-      card.style.display = title.includes(query) ? "block" : "none";
-    });
+    const value = searchBar.value.toLowerCase();
+    const filtered = gameList.filter(g => g.name.toLowerCase().includes(value));
+    loadGames(filtered);
   });
-});
-const gameList = [
-  { name: "1v1.lol", url: "https://1v1.lol" },
-  { name: "Retro Bowl", url: "https://footballretro.netlify.app" },
-  { name: "Cookie Clicker", url: "https://orteil.dashnet.org/cookieclicker/" },
-  { name: "Minecraft Classic", url: "https://classic.minecraft.net" },
-  { name: "Slope", url: "https://slope-game.github.io/slope/" },
-  { name: "Fruit Ninja", url: "https://scratch.mit.edu/projects/10128407/embed" },
-];
 
-const gamesContainer = document.getElementById("games");
-const searchBar = document.getElementById("searchBar");
-const gameFrame = document.getElementById("gameframe");
+  // Load full list on startup
+  loadGames(gameList);
 
-function loadGames(list) {
-  gamesContainer.innerHTML = "";
-  list.forEach(game => {
-    const div = document.createElement("div");
-    div.className = "game-card";
-    div.innerHTML = `
-      <h2>${game.name}</h2>
-      <a href="#">Play</a>
-    `;
-    div.querySelector("a").addEventListener("click", () => {
-      gameFrame.src = game.url;
-      window.scrollTo(0, document.body.scrollHeight);
-    });
-    gamesContainer.appendChild(div);
+  // Fullscreen button fixed
+  fullscreenBtn.addEventListener("click", () => {
+    if (!document.fullscreenElement) {
+      frameWrapper.requestFullscreen();
+      fullscreenBtn.textContent = "Exit Fullscreen";
+    } else {
+      document.exitFullscreen();
+      fullscreenBtn.textContent = "Fullscreen";
+    }
   });
-}
 
-searchBar.addEventListener("input", () => {
-  const value = searchBar.value.toLowerCase();
-  const filtered = gameList.filter(g => g.name.toLowerCase().includes(value));
-  loadGames(filtered);
+  document.addEventListener("fullscreenchange", () => {
+    if (!document.fullscreenElement) {
+      fullscreenBtn.textContent = "Fullscreen";
+    }
+  });
+
 });
 
-loadGames(gameList);
-fullscreenBtn.addEventListener("click", () => {
-  if (!document.fullscreenElement) {
-    frameWrapper.requestFullscreen();
-    fullscreenBtn.textContent = "Exit Fullscreen";
-  } else {
-    document.exitFullscreen();
-    fullscreenBtn.textContent = "Fullscreen";
-  }
-});
 
-document.addEventListener("fullscreenchange", () => {
-  if (!document.fullscreenElement) {
-    fullscreenBtn.textContent = "Fullscreen";
-  }
-});
 
 
 
