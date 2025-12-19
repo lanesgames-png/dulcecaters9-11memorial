@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Unblocked Games</title>
   <link rel="stylesheet" href="style.css">
+
   <style>
     body {
       margin: 0;
@@ -12,15 +13,18 @@
       color: white;
       text-align: center;
     }
+
     .search-container {
       padding: 20px;
     }
+
     iframe {
       width: 100%;
       height: 75vh;
       border: none;
       background: #fff;
     }
+
     #fullscreenBtn {
       margin-top: 15px;
       padding: 10px 18px;
@@ -35,8 +39,18 @@
     #fullscreenBtn:hover {
       background: #3977c9;
     }
+
+    /* Dedicated game iframe */
+    #gameframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      background: #000;
+      margin-top: 20px;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -44,28 +58,38 @@
   <h1>Play anywhere. No limits.</h1>
 </header>
 
+<!-- 🔎 Web Search Section -->
 <div class="search-container">
   <h1>Search The Web</h1>
   <form action="https://www.startpage.com/search" method="GET" target="searchframe">
     <input type="text" name="query" placeholder="Type to search...">
     <button type="submit">Search</button>
   </form>
-  <button id="fullscreenBtn">Full Screen</button>
+
+  <button id="fullscreenBtn">Full Screen Search</button>
 </div>
 
+<!-- Web Search iframe -->
 <iframe id="searchframe" name="searchframe"></iframe>
 
+<!-- 🎮 Game Search -->
 <div class="search-container">
-  <input type="text" id="searchBar" placeholder="Search games... 🔍">
+  <h2>Search Games 🔍</h2>
+  <input type="text" id="searchBar" placeholder="Search games...">
 </div>
 
+<!-- 🕹 Game Cards Container -->
 <main class="games" id="games"></main>
+
+<!-- 🎮 Game iframe -->
+<iframe id="gameframe"></iframe>
 
 <footer>
   <p>© 2025 Unblocked Games</p>
 </footer>
 
 <script>
+  // fullscreen button for search frame
   const iframe = document.getElementById("searchframe");
   const btn = document.getElementById("fullscreenBtn");
 
@@ -74,11 +98,7 @@
     else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
     else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
   });
-</script>
-<script src="script.js"></script>
 
-</body>
-</html>
 
 
 
