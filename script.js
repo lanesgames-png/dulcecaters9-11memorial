@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.getElementById("gameframe").src = game.url;
+
 
 
 
