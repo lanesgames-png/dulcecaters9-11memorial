@@ -170,29 +170,7 @@ document.addEventListener("mousemove", e => {
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
 });
-function checkPassword() {
-  const input = document.getElementById("passwordInput").value;
-  const error = document.getElementById("errorMsg");
-  const box = document.querySelector(".login-box");
-  const screen = document.getElementById("login-screen");
 
-  if (input === "MUSLIM") {
-    screen.style.display = "none";
-    document.getElementById("site-content").style.display = "block";
-  } else {
-    error.textContent = "ACCESS DENIED";
-    error.classList.add("denied");
-    box.classList.add("shake");
-    screen.classList.add("flash");
-
-    // Reset animations
-    setTimeout(() => {
-      error.classList.remove("denied");
-      box.classList.remove("shake");
-      screen.classList.remove("flash");
-    }, 500);
-  }
-}
 
 
 
