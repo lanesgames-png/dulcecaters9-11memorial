@@ -217,6 +217,19 @@ iframe {
     border: none;
     background: #000;
 }
+#frameWrapper:fullscreen iframe,
+#frameWrapper:-webkit-full-screen iframe,
+#frameWrapper:-ms-fullscreen iframe {
+  width: 100vw;
+  height: 100vh;
+}
+#frameWrapper:fullscreen,
+#frameWrapper:-webkit-full-screen,
+#frameWrapper:-ms-fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
 
 
 
