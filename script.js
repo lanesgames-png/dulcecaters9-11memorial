@@ -96,7 +96,6 @@ searchBar.addEventListener("input", () => {
 });
 
 loadGames(gameList);
-});
 fullscreenBtn.addEventListener("click", () => {
   if (!document.fullscreenElement) {
     frameWrapper.requestFullscreen();
@@ -112,6 +111,7 @@ document.addEventListener("fullscreenchange", () => {
     fullscreenBtn.textContent = "Fullscreen";
   }
 });
+
 
 
 
