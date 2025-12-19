@@ -59,7 +59,15 @@
 
 <div id="games"></div>
 
-<iframe id="gameframe"></iframe>
+<div id="frameWrapper" style="width:90%; margin:auto;">
+    <iframe id="gameframe"></iframe>
+    <button id="fullscreenBtn"
+        style="margin-top:10px; padding:10px 18px; font-size:16px;
+        border:none; border-radius:6px; cursor:pointer;">
+        Fullscreen
+    </button>
+</div>
+
 
 <script>
 const gameList = [
@@ -198,6 +206,7 @@ loadGames(gameList);
 </script>
 </body>
 </html>
+
 
 
 
