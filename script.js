@@ -98,8 +98,17 @@ document.addEventListener("fullscreenchange", () => {
     fullscreenBtn.textContent = "Fullscreen";
   }
 });
+#frameWrapper:fullscreen iframe {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+#frameWrapper:-webkit-full-screen iframe {
+  width: 100vw !important;
+  height: 100vh !important;
+}
 
   
+
 
 
 
