@@ -37,80 +37,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 const games = [
-  ["Slope", "https://slopegame.io"],
-  ["Run 3", "https://run3.io"],
-  ["Retro Bowl", "https://retrobowl.me"],
-  ["Cookie Clicker", "https://orteil.dashnet.org/cookieclicker/"],
-  ["2048", "https://play2048.co/"],
-  ["Snake", "https://playsnake.org"],
-  ["Subway Surfers", "https://subwaysurfersgame.io"],
-  ["Basket Random", "https://basketrandom.co"],
-  ["Soccer Random", "https://soccerrandom.io"],
-  ["Moto X3M", "https://motox3m.io"],
-  ["Drift Boss", "https://driftboss.io"],
-  ["Geometry Dash Lite", "https://geometrydash.io"],
-  ["Tetris", "https://tetris.com/play-tetris"],
-  ["Pacman", "https://pacman.live"],
-  ["Agar.io", "https://agar.io"],
-  ["Slither.io", "https://slither.io"],
-  ["Shell Shockers", "https://shellshock.io"],
-  ["Krunker", "https://krunker.io"],
-  ["Paper.io", "https://paper-io.com"],
-  ["Hole.io", "https://hole-io.com"],
-  ["Smash Karts", "https://smashkarts.io"],
-  ["Zombs Royale", "https://zombsroyale.io"],
-  ["Fireboy & Watergirl", "https://fireboywatergirlunblocked.com"],
-  ["Temple Run 2", "https://templerun2.io"],
-  ["Crossy Road", "https://crossyroadgame.io"],
-  ["Vex 3", "https://vex3.io"],
-  ["Vex 4", "https://vex4.io"],
-  ["Vex 5", "https://vex5.io"],
-  ["Vex 6", "https://vex6.io"],
-  ["Vex 7", "https://vex7.io"],
-  ["Duck Life", "https://ducklife.io"],
-  ["Stickman Hook", "https://stickmanhookgame.io"],
-  ["Madalin Cars 2", "https://madalincars2.io"],
-  ["Madalin Cars 3", "https://madalincars3.io"],
-  ["Among Us (Browser)", "https://amongusplay.online"],
-  ["FNAF", "https://fnaf.games"],
-  ["Happy Wheels", "https://happywheelsgame.io"],
-  ["Getaway Shootout", "https://getawayshootout.co"],
-  ["Basketball Stars", "https://basketballstars.io"],
-  ["BitLife", "https://bitlifeonline.io"],
-  ["Cut the Rope", "https://cuttherope.net"],
-  ["Bad Ice Cream", "https://badicecreamgames.com"],
-  ["Bad Ice Cream 2", "https://badicecreamgames.com"],
-  ["Bad Ice Cream 3", "https://badicecreamgames.com"],
-  ["Doodle Jump", "https://doodlejump.fun"],
-  ["Helix Jump", "https://helixjump.io"],
-  ["Tiny Fishing", "https://tinyfishing.io"],
-  ["Paper Minecraft", "https://paperminecraft.io"],
-  ["World’s Hardest Game", "https://worldshardestgame.io"],
-  ["Elastic Man", "https://elasticman.org"],
-  ["We Become What We Behold", "https://ncase.me/ballot/"],
-  ["Friday Night Funkin’", "https://fnfgo.com"],
-  ["Rooftop Snipers", "https://rooftopsnipers.co"],
-  ["1v1.lol", "https://1v1.lol"],
-  ["Temple of Boom", "https://templeofboom.io"],
-  ["Stick Duel", "https://stickduel.io"],
-  ["Bloxorz", "https://bloxorz.io"],
-  ["Snow Rider 3D", "https://snowrider3d.io"],
-  ["OvO", "https://ovogame.io"],
-  ["Tunnel Rush", "https://tunnelrush.io"],
-  ["Monkey Mart", "https://monkeymart.io"],
-  ["Stack", "https://stackgame.io"],
-  ["Flappy Bird", "https://flappybird.io"],
-  ["Drift Hunters", "https://drifthunters.io"],
-  ["Falling Guyz", "https://fallingguyz.io"],
-  ["Idle Breakout", "https://idlebreakout.io"],
-  ["Basket Swooshes", "https://basketswooshes.io"],
-  ["Pixel Gun Apocalypse", "https://pixelgunapocalypse.io"],
-  ["Time Shooter 2", "https://timeshooter2.io"],
-  ["Tunnel Runner", "https://tunnelrunner.io"],
-  ["Stick Merge", "https://stickmerge.io"],
-  ["Temple Raider", "https://temple-raider.com"],
-  ["Slope 2", "https://slope2.io"]
- ["Polytrack.gg", "https://polytrack.gg"]
+  <div class="game" data-url="https://play2048.co/">2048</div>
+<div class="game" data-url="https://poki.com/en/g/slope">Slope</div>
+<div class="game" data-url="https://poki.com/en/g/ovo">OvO</div>
+<div class="game" data-url="https://poki.com/en/g/moto-x3m">Moto X3M</div>
+<div class="game" data-url="https://poki.com/en/g/run-3">Run 3</div>
+<div class="game" data-url="https://poki.com/en/g/vex-7">Vex 7</div>
+<div class="game" data-url="https://poki.com/en/g/stickman-hook">Stickman Hook</div>
+<div class="game" data-url="https://poki.com/en/g/drift-boss">Drift Boss</div>
+<div class="game" data-url="https://tetris.com/play-tetris">Tetris</div>
+<div class="game" data-url="https://snake.io/">Snake</div>
+<div class="game" data-url="https://minesweeper.online/">Minesweeper</div>
+<div class="game" data-url="https://wordleplay.com/">Wordle</div>
+<div class="game" data-url="https://sudoku.com/">Sudoku</div>
+<div class="game" data-url="https://garticphone.com/">Gartic Phone</div>
+<div class="game" data-url="https://skribbl.io/">Skribbl.io</div>
+<div class="game" data-url="https://1v1.lol/">1v1.lol</div>
+<div class="game" data-url="https://shellshock.io/">Shell Shockers</div>
+<div class="game" data-url="https://krunker.io/">Krunker</div>
+<div class="game" data-url="https://diep.io/">Diep.io</div>
+<div class="game" data-url="https://bonk.io/">Bonk.io</div>
 ];
 
 const container = document.getElementById("games");
@@ -168,6 +114,7 @@ function checkPassword() {
     }, 500);
   }
 }
+
 
 
 
