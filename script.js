@@ -41,15 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Cookie Clicker", url: "https://orteil.dashnet.org/cookieclicker/" },
     { name: "Fruit Ninja", url: "https://scratch.mit.edu/projects/10128407/embed" }
   ];
-fullscreenBtn.addEventListener("click", () => {
-  if (!document.fullscreenElement) {
-    frameWrapper.requestFullscreen().catch(err => console.log(err));
-    fullscreenBtn.textContent = "Exit Fullscreen";
-  } else {
-    document.exitFullscreen();
-    fullscreenBtn.textContent = "Fullscreen";
-  }
-});
 
   const gamesContainer = document.getElementById("games");
   const searchBar = document.getElementById("searchBar");
@@ -86,8 +77,17 @@ fullscreenBtn.addEventListener("click", () => {
 
   // Load full list on startup
   loadGames(gameList);
-
+fullscreenBtn.addEventListener("click", () => {
+  if (!document.fullscreenElement) {
+    frameWrapper.requestFullscreen().catch(err => console.log(err));
+    fullscreenBtn.textContent = "Exit Fullscreen";
+  } else {
+    document.exitFullscreen();
+    fullscreenBtn.textContent = "Fullscreen";
+  }
+});
   
+
 
 
 
