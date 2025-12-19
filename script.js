@@ -79,14 +79,28 @@ document.addEventListener("DOMContentLoaded", () => {
   loadGames(gameList);
 fullscreenBtn.addEventListener("click", () => {
   if (!document.fullscreenElement) {
-    frameWrapper.requestFullscreen().catch(err => console.log(err));
+    frameWrapper.requestFullscreen().then(() => {
+      frameWrapper.style.width = "100vw";
+      frameWrapper.style.height = "100vh";
+    });
     fullscreenBtn.textContent = "Exit Fullscreen";
   } else {
-    document.exitFullscreen();
+    document.exitFullscreen().then(() => {
+      frameWrapper.style.width = "100%";
+      frameWrapper.style.height = "600px";
+    });
     fullscreenBtn.textContent = "Fullscreen";
   }
 });
+
+document.addEventListener("fullscreenchange", () => {
+  if (!document.fullscreenElement) {
+    fullscreenBtn.textContent = "Fullscreen";
+  }
+});
+
   
+
 
 
 
