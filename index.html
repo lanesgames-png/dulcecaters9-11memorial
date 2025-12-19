@@ -59,6 +59,21 @@
   <footer>
     <p>© 2025 Unblocked Games</p>
   </footer>
+<form action="https://duckduckgo.com/" method="GET" target="searchframe">
+  <input type="text" name="q" placeholder="Search..." autocomplete="off">
+  <button type="submit">Search</button>
+</form>
+
+<iframe name="searchframe" style="width:100%; height:80vh; border:none;"></iframe>
+<script>
+function killBlankTargets() {
+  document.querySelectorAll('a[target="_blank"]').forEach(a => {
+    a.removeAttribute('target');
+  });
+}
+setInterval(killBlankTargets, 500);
+</script>
+
 
 
 
